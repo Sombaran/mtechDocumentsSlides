@@ -12,8 +12,22 @@
   - Event 0 and 1 is _uncertain event_
   - Therefore the numerical measurement of this uncertain event is provided by an important branch of mathematics called as _Theory of probablity_
 - Basic terminlogy
-  - Random experiment: If an experiment is conducted under identical conditions and expected output is not unique but may be any one of the possible outcomes then such an experiment is called as _random experiment_
-  - Outcome: It is the result of a random experiment
-  - Trail and Event: Any particular performance case in a random experiment is termed as _trail_ and an outcome or combination of outcome is called as an _event_
-  - Exhaustive event: It is the total number of possible outcomes of a random experiment is known as _exhaustive event_ or _case_
-  - Favourable event: 
+  - __Random experiment__: If an experiment is conducted under identical conditions and expected output is not unique but may be any one of the possible outcomes then such an experiment is called as _random experiment_
+  - __Outcome__: It is the result of a random experiment
+  - __Trail and Event__: Any particular performance case in a random experiment is termed as _trail_ and an outcome or combination of outcome is called as an _event_
+  - __Exhaustive event__: It is the total number of possible outcomes of a random experiment is known as _exhaustive event_ or _case_
+  - __Favourable event__: The number of cases favourable to an event in a trail is the number of outcomes which entail the happening of an event
+  - __Mutually exclusive event__: In a trail if no two or more events do not happen simultaneosult is called as _mutually exclusive event_ or _at a time one outcome will occur_
+  - __Equally likely event__: Every possible outcomes has _equal chance to occur_
+  - __Independent events__: For eq. If we throw a dice then at first chance _5_ comes then at second, third,fouth, fifth and sixth chance also _5_ can come
+- Short history of probability
+  - Galileo --> B. Pascel & P.Fermat --> J Bernoulli --> T Bayes --> P.S Laplace --> chebychev --> Markoff --> brapound --> khirtchen --> A. Kolmogon
+- Probability approaches and types
+  - Classical probability
+     - Also called as _A Priore_
+     - If a random experiment or trail result in _n_ exhaustive, mutually exclusive, equally likely outcomes out of which is _m_ favourable to the occurance of an event _E_, then probability of occurancd of an event _P(E)_ is given by:
+    $ \frac{Total number of favourable condition}{Total number of exhaustive events} $
+    - s
+  - Emperical probability2q
+  - Axiomatic probability
+  - Conditional probability
