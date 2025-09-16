@@ -23,11 +23,21 @@
 - Short history of probability
   - Galileo --> B. Pascel & P.Fermat --> J Bernoulli --> T Bayes --> P.S Laplace --> chebychev --> Markoff --> brapound --> khirtchen --> A. Kolmogon
 - Probability approaches and types
-  - Classical probability
-     - Also called as _A Priore_
-     - If a random experiment or trail result in _n_ exhaustive, mutually exclusive, equally likely outcomes out of which is _m_ favourable to the occurance of an event _E_, then probability of occurancd of an event _P(E)_ is given by:
-    $ \frac{Total number of favourable condition}{Total number of exhaustive events} $
-    - s
-  - Emperical probability2q
-  - Axiomatic probability
-  - Conditional probability
+  - __Classical probability__
+    - Also called as _A Priore_
+    - If a random experiment or trail result in _n_ exhaustive, mutually exclusive, equally likely outcomes out of which is _m_ favourable to the occurance of an event _E_, then probability of occurancd of an event _P(E)_ is given by:
+    $ \frac{Total number of favourable condition(m)}{Total number of exhaustive events(n)} $
+    - James benoulli was the first person who presented quantative measure of uncertainity
+    - __Remarks__
+      - _m > 0_ , _n > 0_ and _m < n_
+      - _0 < P(E) < 1_
+      - Odds in favour of _E_= $ \frac{m}{n-m} $
+      - Odds against _E_ =  $ \frac{n-m}{m} $
+      - Non happening of an event is called _Complementary event of E_ and is denoted by _E`_
+      - _p + q = 1_ or _P(E) + P(E`) = 1_
+    - Limitations of classical probability
+      - If the various experiments of a random experiment is not equally likely
+      - If exhaustive case of a random experiment is infinite or unknown
+  - __Statistical( or Empirical) probability__
+  - __Axiomatic probability__
+  - __Conditional probability__
