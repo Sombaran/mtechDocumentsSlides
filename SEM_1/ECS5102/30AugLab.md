@@ -70,4 +70,44 @@
 - SaaS
   - What software you want
 
-## Cloud deployment model 
+## Cloud deployment model
+
+- By default is public
+- Private
+- Hybrid (Combination of public and private)
+- Community
+- Multi
+
+## Virtual machine
+
+- Computer system(guest) created using software (hypervisor) on one physial computer (host) to emulate the functionality of another seperate physical computer
+
+## Demo AWS
+
+- Created AWS free tier account
+  - ID __365535501733__
+- Created Static website
+  - [Click here for static website](https://myfirstawswebsiteriaan.s3.ap-southeast-2.amazonaws.com/index.html)
+- Steps to create static website
+  - Open S3 bucket service
+  - Click _create bucket_
+  - Add _name_ for your bucket
+  - Click on _create bucket_
+  - Once website is created, we need to upload _index.html_ file or _folder with pictures_
+  - Click on _index.html_
+  - Copy content from _copy URL_
+  - Open on browser
+    - Error: _Access denied_
+  - Go back to page where you clicked _index.html_
+  - Navigate to _Properties_  and _enable_ static website option
+  - Click on save changes, refresh browser
+    - Error: _Access denied_
+  - Go back to page where you clicked _index.html_
+  - Navigate to _Permission_ and uncheck _block public access_
+  - Click on save changes, refresh browser
+    - Error: _Access denied_
+  - Go back to page where you clicked _index.html_
+  - Navigate to _Permission_ and _object ownership_, enable _ACL's enabled_
+  - Go back to page where you clicked _index.html_ and select _index.html_
+  - Click on _Actions_ and click _Make public using ACL_
+  - Click on save changes, refresh browser

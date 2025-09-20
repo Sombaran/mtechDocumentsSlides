@@ -1,0 +1,7 @@
+# 29 August 2025
+
+[Click here for recording](https://cciitpatna-my.sharepoint.com/personal/cs514cse_iitp_ac_in/_layouts/15/stream.aspx?id=%2Fpersonal%2Fcs514cse%5Fiitp%5Fac%5Fin%2FDocuments%2FRecordings%2FECS%205101%20Lecture%20Room%2D20250830%5F080228%2DMeeting%20Recording%2Emp4&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E5fd0c450%2D152b%2D4c3b%2Dbdf3%2D91d710c00124)
+
+## Linear search
+
+## Insertion sort
