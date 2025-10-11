@@ -1,0 +1,63 @@
+# 4 October 2025
+
+Tree data structure
+
+- Sequence of access elements in hierarical thats why it is called non-linear data structure.
+- Loop is not formed here
+- Trees are specially form of graph that does not form cyclic form of elements
+- Trees are subset of graph
+
+## Binary Tree
+
+- Represented by T 
+- T empty called as _null or empty tree_ 
+- Node with no child is called _terminal node_ / _leaf node_
+- A tree can have 0/1/2 child
+- starting is a root node
+- All subtree in a tree is a _tree_
+- Copies does not mean same number of node but it means _same arrangement of node_
+
+## Why trees are so important (Binary tree)
+
+- Ulimate aim of any processor/ computing system is to perform mathematical expression
+- Operator must be _root node_ and operand must be _child node_ 
+- Starting node is called _root node_
+- Root has _left child and right child_/ _left successor or right successor_/ _left descendent or right descendent_
+- There is only _one root_
+- _left child and right child_ is called _sibling_ and must be on _same level_
+- _Two vertices_ are joined _edges_, _A_ to _B_ where A and B are called _vertices_
+- Path Start from _A_ and go to _B_ and then to _C_ and node should be connected
+- level: Root must at _0_ level, as we do down level increases
+- Height of tree (Depth) is the maximum number of nodes in any branch of _T_
+
+## Complete Binary Tree
+
+- If all the nodes having _maximum_ possible child other than _leaf_ or _terminal node_ then it is called as _complete bianry tree_
+- We try to accomodate all the nodes with maximum number of child
+- If at last level it is not possible to accomodate child then we put at the _left node_ (__last && left node__)
+
+## Accessing in Tree
+
+- Depth of tree = __log n + 1__
+  - If n (nodes is 100000) then depth is 21
+
+## Extended BT
+
+- If a node has 0 or 2 leaf node no node with 2 child is allowed
+
+## Representation of Tree
+
+- Linked representation
+  - Doubly linked list 
+- Sequential representation
+  - K and 2K+1
+  - elimate space 
+  
+  
+## Traveral in Tree
+
+- Pre order
+- In order
+- Post order
+
+
