@@ -1,0 +1,32 @@
+@startuml capstoneSequence
+title CI/CD Upload Sequence Diagram (Grouped)
+
+actor Developer
+
+box "Build Preparation" #DDDDDD
+participant "Conan Package Manager"
+participant "CMake"
+end box
+
+box "CI/CD Trigger" #EEEEEE
+participant "GitHub"
+end box
+
+box "Build & Package" #DDDDDD
+participant "GitHub Actions"
+end box
+
+box "Deployment" #EEEEEE
+participant "Docker Hub"
+end box
+
+Developer -> "Conan Package Manager" : Generate build files
+"Conan Package Manager" -> "CMake" : Pass build files
+"CMake" -> "GitHub" : Push code
+"GitHub" -> "GitHub Actions" : Trigger workflow
+"GitHub Actions" -> "GitHub Actions" : Docker build
+"GitHub Actions" -> "GitHub" : Upload artifact
+"GitHub" -> "Docker Hub" : Push artifact
+"Docker Hub" -> Developer : Artifact available
+
+@enduml
