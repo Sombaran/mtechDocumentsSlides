@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>capstoneProgressReport.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="capstone-project---progress-report---1">Capstone Project - Progress Report - 1</h1>
+<p><strong>Author:</strong> Sombaran Gupta<br>
+<strong>Email:</strong> sombaran_pa2507mte92@iitp.ac.in<br>
+<strong>Date:</strong> November 1, 2025<br>
+<strong>Location:</strong> Hyderabad, Telangana, India<br>
+<strong>Course:</strong> EMTech - Cloud Computing<br>
+<strong>Subject Code:</strong> EHS 5104<br>
+<strong>Project Type:</strong> Capstone project with CI/CD with Github Actions</p>
+<h2 id="overview">Overview</h2>
+<p><code>ct-recon</code> is a C++ project designed for modular, containerized development and deployment. It integrates modern C++ practices with a streamlined CI/CD pipeline using GitHub Actions and Docker.<br>
+GitHub Actions is often chosen over Jenkins for modern CI/CD pipelines because it offers native GitHub integration, easier setup, and lower maintenance overhead—especially for cloud-native and open-source projects.<br></p>
+<ul>
+<li>The project is hosted on GitHub, so Actions integrates seamlessly.</li>
+<li>No need to manage Jenkins infrastructure.</li>
+<li>YAML workflows are version-controlled alongside the code.</li>
+<li>Docker and Conan steps are easily automated with reusable actions.</li>
+<li>Ideal for a capstone project with limited deployment complexity.</li>
+</ul>
+<hr>
+<h2 id="github-repository">Github Repository</h2>
+<p><a href="https://github.com/Sombaran/ct-recon">Click here for view github repository</a></p>
+<hr>
+<h2 id="key-technologies">Key Technologies</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Tools/Technologies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Language</td>
+<td>C++ (C++11 and beyond)</td>
+</tr>
+<tr>
+<td>Build System</td>
+<td>CMake (cmake version 3.22.1)</td>
+</tr>
+<tr>
+<td>Package Manager</td>
+<td>Conan (Conan version 2.22.1)</td>
+</tr>
+<tr>
+<td>CI/CD</td>
+<td>GitHub Actions</td>
+</tr>
+<tr>
+<td>Containerization</td>
+<td>Docker</td>
+</tr>
+<tr>
+<td>Scripting</td>
+<td>Shell, Python</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="project-structure">Project Structure</h2>
+<ul>
+<li><code>source/</code>, <code>include/</code>, <code>test/</code> – Core source and test files</li>
+<li><code>.github/workflows/</code> – GitHub Actions CI/CD definitions</li>
+<li><code>conanfile.py</code> – Conan dependency management</li>
+<li><code>Dockerfile</code> – Docker image definition</li>
+<li><code>run.sh</code> – Local test script</li>
+<li><img src="https://raw.githubusercontent.com/Sombaran/mtechDocumentsSlides/main/SEM_1/EHS5104/projectTreeStructure.png" alt="Project tree structure"></li>
+</ul>
+<hr>
+<h2 id="cicd-workflow-diagram-plantuml">CI/CD Workflow Diagram (PlantUML)</h2>
+<p><img src="https://raw.githubusercontent.com/Sombaran/mtechDocumentsSlides/main/SEM_1/EHS5104/capstoneSequenceDiagramProgressReport.png" alt="Click here for sequence diagram"></p>
+<pre class="hljs"><code><div>@startuml
+title CI/CD Workflow for ct-recon
+
+actor Developer
+
+box &quot;Build Preparation&quot; #DDDDDD
+participant &quot;Conan&quot;
+participant &quot;CMake&quot;
+end box
+
+box &quot;Source Control&quot; #EEEEEE
+participant &quot;GitHub&quot;
+end box
+
+box &quot;Automation&quot; #DDDDDD
+participant &quot;GitHub Actions&quot;
+end box
+
+box &quot;Deployment&quot; #EEEEEE
+participant &quot;Docker Hub&quot;
+end box
+
+Developer -&gt; Conan : Install dependencies
+Conan -&gt; CMake : Generate build files
+CMake -&gt; GitHub : Push source code
+GitHub -&gt; GitHub Actions : Trigger CI workflow
+GitHub Actions -&gt; GitHub Actions : Build Docker image
+GitHub Actions -&gt; Docker Hub : Push image
+Docker Hub -&gt; Developer : Image available for use
+
+@enduml
+</div></code></pre>
+<hr>
+<h2 id="docker-usage">Docker Usage</h2>
+<pre class="hljs"><code><div><span class="hljs-comment"># Build Docker image</span>
+docker build . -t ct-recon:&lt;commit-hash-or-version&gt;
+
+<span class="hljs-comment"># Login to Docker Hub</span>
+docker login -u usomgupta
+
+<span class="hljs-comment"># Run the container</span>
+docker run ct-recon:v1 ./ct-recon --input data.txt --verbose
+
+<span class="hljs-comment"># Shell into the container</span>
+docker run -it [image ID] bash
+
+<span class="hljs-comment"># Link to Docker Hub:</span>
+[Docker Hub: usomgupta/ct-recon](https://hub.docker.com/r/usomgupta/ct-recon)
+</div></code></pre>
+<hr>
+<h2 id="cicd-workflow">CI/CD Workflow</h2>
+<p>The CI/CD pipeline is triggered on code push and automates the build and deployment process using GitHub Actions and Docker Hub.</p>
+<ul>
+<li>Uses: ubuntu-latest image</li>
+<li>Checkout from repository</li>
+<li>Login into Docker Hub</li>
+<li>Set up Docker Build</li>
+<li>Build and push Docker image</li>
+<li>Upload build artifacts</li>
+</ul>
+<pre class="hljs"><code><div><span class="hljs-attr">name:</span> <span class="hljs-string">CI</span> <span class="hljs-string">for</span> <span class="hljs-string">docker/build-push-action</span>
+
+<span class="hljs-attr">on:</span>
+  <span class="hljs-attr">push:</span>
+    <span class="hljs-attr">branches:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">main</span>
+
+<span class="hljs-attr">permissions:</span>
+  <span class="hljs-attr">contents:</span> <span class="hljs-string">write</span>
+  <span class="hljs-attr">issues:</span> <span class="hljs-string">write</span>
+  <span class="hljs-attr">pull-requests:</span> <span class="hljs-string">write</span>
+
+<span class="hljs-attr">jobs:</span>
+  <span class="hljs-attr">build-and-push:</span>
+    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-22.04</span>  <span class="hljs-comment"># Pin to a stable runner version</span>
+    <span class="hljs-attr">permissions:</span>
+      <span class="hljs-attr">contents:</span> <span class="hljs-string">write</span>
+      <span class="hljs-attr">pull-requests:</span> <span class="hljs-string">read</span>
+
+    <span class="hljs-attr">steps:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Checkout</span> <span class="hljs-string">repository</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v4</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">fetch-depth:</span> <span class="hljs-number">1</span>  <span class="hljs-comment"># Shallow clone for faster checkout</span>
+
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Log</span> <span class="hljs-string">in</span> <span class="hljs-string">to</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Hub</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/login-action@v3</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">registry:</span> <span class="hljs-string">${{</span> <span class="hljs-string">env.REGISTRY</span> <span class="hljs-string">}}</span>
+          <span class="hljs-attr">username:</span> <span class="hljs-string">${{</span> <span class="hljs-string">secrets.DOCKER_USERNAME</span> <span class="hljs-string">}}</span>
+          <span class="hljs-attr">password:</span> <span class="hljs-string">${{</span> <span class="hljs-string">secrets.DOCKERHUB_TOKEN</span> <span class="hljs-string">}}</span>
+
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">up</span> <span class="hljs-string">Docker</span> <span class="hljs-string">Buildx</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/setup-buildx-action@v3</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">driver:</span> <span class="hljs-string">docker-container</span>
+          <span class="hljs-attr">driver-opts:</span> <span class="hljs-string">|
+            image=moby/buildkit:latest
+</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Build</span> <span class="hljs-string">and</span> <span class="hljs-string">push</span> <span class="hljs-string">Docker</span> <span class="hljs-string">image</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">docker/build-push-action@v5</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">builder:</span> <span class="hljs-string">${{</span> <span class="hljs-string">steps.buildx.outputs.name</span> <span class="hljs-string">}}</span>
+          <span class="hljs-attr">platforms:</span> <span class="hljs-string">linux/amd64</span>  <span class="hljs-comment"># Use single platform unless multi-arch is needed</span>
+          <span class="hljs-attr">context:</span> <span class="hljs-string">.</span>
+          <span class="hljs-attr">push:</span> <span class="hljs-literal">true</span>
+          <span class="hljs-attr">tags:</span> <span class="hljs-string">${{</span> <span class="hljs-string">secrets.DOCKER_USERNAME</span> <span class="hljs-string">}}/repo:v1</span>
+          <span class="hljs-attr">cache-from:</span> <span class="hljs-string">type=gha</span>
+          <span class="hljs-attr">cache-to:</span> <span class="hljs-string">type=gha,mode=max</span>
+
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Upload</span> <span class="hljs-string">C++</span> <span class="hljs-string">build</span> <span class="hljs-string">artifacts</span>
+        <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/upload-artifact@v4</span>
+        <span class="hljs-attr">with:</span>
+          <span class="hljs-attr">name:</span> <span class="hljs-string">cpp-build-artifacts</span>
+          <span class="hljs-attr">path:</span> <span class="hljs-string">|
+            build/libmylib.so
+            build/myprogram
+</span></div></code></pre>
+<hr>
+<h2 id="local-testing">Local Testing</h2>
+<p>To run the project locally:</p>
+<pre class="hljs"><code><div>sh run.sh
+</div></code></pre>
+<hr>
+<h2 id="testing-the-docker-artifact">Testing the docker artifact</h2>
+<p><img src="https://raw.githubusercontent.com/Sombaran/mtechDocumentsSlides/main/SEM_1/EHS5104/testingTheImage.png" alt="Gemini logo"></p>
+<hr>
+<h2 id="summary">Summary</h2>
+<p>The CI/CD pipeline is triggered on every code push. It automates build, test, and deployment using GitHub Actions, and publishes Docker images to Docker Hub for seamless distribution.<br>
+<code>Future work</code>: <strong>I will try to deploy artifacts in jfrog</strong></p>
+<hr>
+
+</body>
+</html>
