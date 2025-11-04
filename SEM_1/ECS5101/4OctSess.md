@@ -67,6 +67,6 @@
 
 ## Lab Exercise
 
-[Click here hackerrank link](https://www.hackerrank.com/contests/executive-m-tech-test-9/challenges)
+[Click here for hackerrank link](https://www.hackerrank.com/contests/executive-m-tech-test-9/challenges)
 
 
