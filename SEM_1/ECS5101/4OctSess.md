@@ -1,6 +1,8 @@
 # 4 October 2025 
 
 > All trees are graphs are but all graphs are not trees
+> [Click here for recording](https://cciitpatna-my.sharepoint.com/:v:/r/personal/cs514cse_iitp_ac_in/Documents/Recordings/ECS%205101%20Lecture%20Room-20251004_081311-Meeting%20Recording.mp4?csf=1&web=1&e=bmJtLh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
 
 ## Tree data structure
 

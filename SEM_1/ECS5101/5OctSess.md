@@ -1,7 +1,7 @@
 # 5 October 2025
 
 > [Linked from previous session on 4-October-2025](https://github.com/Sombaran/mtechDocumentsSlides/blob/main/SEM_1/ECS5101/4OctSess.md)
-
+> [Click here for recording](https://cciitpatna-my.sharepoint.com/:v:/r/personal/cs514cse_iitp_ac_in/Documents/Recordings/ECS%205101%20Lecture%20Room-20251005_080514-Meeting%20Recording.mp4?csf=1&web=1&e=JQYJ6G&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) 
 ## Traversal in Binary Tree
 
 - PreOrder
@@ -47,7 +47,7 @@
   - Pick a node from `PostOrder from end which is root` and indentify its position on the Inoder and then decide left and right
   - If node is marked is already covered then we cannot accomodate to the tree
 
-## Binary search tree or Binart Sorted Tree
+## Binary search tree or Binary Sorted Tree
 
 - One of the most important DS in computer science because it uses `O(log2 n)` for searching, deletion and search.
 - Application: Used to remove duplicate elements.
@@ -59,6 +59,10 @@
 - Never allow duplicate element.
 - While doing `search and traversal` the above 2 properties are not effected but it might get affected during `insertion and deletion`. Therefore while doing `insertion and deletion` we need to restore back the property of the tree.
 - Entry point is root.
+- BST is popular as it computational complexity is in `O log 2 N` for searching, insertion and deletion.
+- Number of comparisons in BST is bounded by the `depth of the tree` and this comes from the fact that we proceed down a single path of the tree.
+- The running time is directly proportional to the depth of the tree.
+- All BST are generally a `Complete binary tree` but all `Complete binary tree` are not `BST`
 
 ## Insertion in BST
 
@@ -93,3 +97,7 @@
 ## Deletion in BST
 
 - Deletion uses `FIND algorithm` to find location of the node data and location of the `Parent Node`
+- 3 Cases
+  - No child
+  - One child: either left or right
+  - Two child: then new take delete node after taking `InOder Traversal`
