@@ -44,5 +44,6 @@
 - Pick minimum edge and `mark it as visited`
 - Choose connected Vertices `with least weight` from the source node
 - Repeat untill V-1 edges
+- Edge weight is considered
 
 > Prim's and Krushal algorithm uses undirected graph

@@ -21,6 +21,8 @@
 
 ## AVL Tree Adelson - Veleskii - Landis 
 
+- AVL Tree is `balanced BST`
+- It balances the left and right height and ensures `balance factor`of all the node is either `0/1/-1`
 - It is specialized balanced tree where `balance factor`of all the node is either `0/1/-1`
 - An empty binary tree is an AVL tree
 - What is balance factor?
@@ -32,9 +34,17 @@
 ## Rotation in AVL tree
 
 - LL
+  - Uses single rotation
   - Identify the first node `A` from point of insertion that is violating AVL Tree property
   - Make that node `A` and its left child `B`
-  - `B` goes up and `A` goes down and `B` right child becomes `A` left
+  - `B` goes up and `A` comes down and `B` right child becomes `A` left child
 - RR
+  - Uses single rotation
+  - Identify the first node `A` from point of insertion that is violating AVL Tree property
+  - Make that node `A` and its right child `B`
+  - `B` goes up and `A` comes down and `B` left child becomes `A` right child
+> `LL and RR` are also called as `mirror imaging rotations`
 - LR
-- RL 
+  - Uses two 2 rotations
+- RL
+  - Uses two 2 rotations
