@@ -46,5 +46,7 @@
 > `LL and RR` are also called as `mirror imaging rotations`
 - LR
   - Uses two 2 rotations
+  - First Rotation is RR and then LL
 - RL
   - Uses two 2 rotations
+  - First rotation is LL and then RR
